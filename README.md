@@ -58,6 +58,9 @@ Proliferating
 ```r
 library(SingleR)
 
+#Load your query dataset (must be SingleCellExperiment)
+#query_sce <- readRDS("your_query_sce.rds")
+
 #Download reference first 
 ref <- readRDS("path/to/hsra_kidney_reference_sce_agg.rds")
 
@@ -74,8 +77,10 @@ table(pred$labels)
 
 ```r
 library(Seurat)
+#Load your query dataset (Seurat object)
+#query_obj <- readRDS("your_query_seurat.rds")
 
-#Download reference first
+#Download reference
 ref <- readRDS("path/to/hsra_kidney_reference_dietseurat.rds")
 
 anchors <- FindTransferAnchors(
