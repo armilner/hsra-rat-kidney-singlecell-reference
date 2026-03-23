@@ -18,7 +18,7 @@ This dataset provides a curated reference of the juvenile rat kidney with annota
 
 ## Data
 
-Reference objects are available on Zenodo:
+Reference objects needed for annotation are available on Zenodo:
 
 https://doi.org/10.5281/zenodo.19196716
 
@@ -61,7 +61,7 @@ library(SingleR)
 #Load your query dataset (must be SingleCellExperiment)
 #query_sce <- readRDS("your_query_sce.rds")
 
-#Download reference first 
+#Download reference from Zenodo 
 ref <- readRDS("path/to/hsra_kidney_reference_sce_agg.rds")
 
 pred <- SingleR(
@@ -80,7 +80,7 @@ library(Seurat)
 #Load your query dataset (Seurat object)
 #query_obj <- readRDS("your_query_seurat.rds")
 
-#Download reference
+#Download reference from Zenodo
 ref <- readRDS("path/to/hsra_kidney_reference_dietseurat.rds")
 
 anchors <- FindTransferAnchors(
