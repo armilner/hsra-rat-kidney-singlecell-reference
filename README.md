@@ -45,7 +45,7 @@ ref <- readRDS("hsra_kidney_reference_sce.rds")
 pred <- SingleR(
   test = query_sce,
   ref = ref,
-  labels = ref$label.main
+  labels = ref$celltype
 )
 
 table(pred$labels)
@@ -66,7 +66,7 @@ anchors <- FindTransferAnchors(
 
 predictions <- TransferData(
   anchorset = anchors,
-  refdata = ref$label.main,
+  refdata = ref$celltype,
   dims = 1:30
 )
 
