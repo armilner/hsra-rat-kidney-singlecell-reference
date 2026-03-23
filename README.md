@@ -18,12 +18,13 @@ This dataset provides a curated reference of the juvenile rat kidney with annota
 
 ## Data
 
-The repository includes:
+Reference objects are available on Zenodo:
 
-- `hsra_kidney_reference_sce.rds` — SingleCellExperiment object for use with SingleR  
-- `hsra_kidney_reference_seurat.rds` — Seurat object for label transfer workflows  
-- `hsra_kidney_markers_all.csv` — Differentially expressed marker genes  
-- `hsra_kidney_top_markers.csv` — Top marker genes per cell type  
+https://doi.org/10.5281/zenodo.19196716
+
+Files:
+- hsra_kidney_reference_dietseurat.rds
+- hsra_kidney_reference_sce_aggr.rds
 
 ---
 
@@ -57,7 +58,8 @@ Proliferating
 ```r
 library(SingleR)
 
-ref <- readRDS("hsra_kidney_reference_sce.rds")
+#Download reference first 
+ref <- readRDS("path/to/hsra_kidney_reference_sce_agg.rds")
 
 pred <- SingleR(
   test = query_sce,
@@ -73,7 +75,8 @@ table(pred$labels)
 ```r
 library(Seurat)
 
-ref <- readRDS("hsra_kidney_reference_seurat.rds")
+#Download reference first
+ref <- readRDS("path/to/hsra_kidney_reference_dietseurat.rds")
 
 anchors <- FindTransferAnchors(
   reference = ref,
@@ -96,7 +99,7 @@ query_obj <- AddMetaData(query_obj, metadata = predictions)
 
 Single-nucleus RNA-seq data were processed using Seurat. Cells were filtered using standard quality control metrics, normalized, and clustered. Cell type annotations were assigned based on differential gene expression and established kidney marker genes.
 
-Reference objects were generated for use with SingleR and Seurat label transfer workflows.
+Reference objects were generated for use with SingleR and Seurat label transfer workflows. This reference was validated across independent rat kidney datasets using both SingleR annotation and Seurat label transfer approaches.
 
 ---
 
