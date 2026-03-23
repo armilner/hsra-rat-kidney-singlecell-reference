@@ -107,11 +107,6 @@ Reference objects were generated for use with SingleR and Seurat label transfer 
 
 ```
 hsra-rat-kidney-reference/
-├── data/
-│   ├── hsra_kidney_reference_sce.rds
-│   ├── hsra_kidney_reference_seurat.rds
-│   ├── hsra_kidney_markers_all.csv
-│   └── hsra_kidney_top_markers.csv
 ├── scripts/
 │   ├── run_singler_example.R
 │   └── run_seurat_label_transfer.R
