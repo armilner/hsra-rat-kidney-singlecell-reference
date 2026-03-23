@@ -31,6 +31,23 @@ The repository includes:
 
 Annotations were assigned based on clustering, differential expression, and known kidney marker genes.
 
+### There are 14 celltypes included in the reference:
+
+Podocytes
+GC - Glomerular endothelial cells
+PT-C - Proximal tubule, convoluted
+PT-S - Proximal tubule, straight
+DTL-LOH - Descending thin limb
+ATL-LOH - Ascending thin limb
+TAL-LOH - Thick ascending limb
+DT-C - Distal tubule, convoluted 
+CT - Connecting tubule
+CD-PC - Collecting duct, Principal Cell
+CD-ICA - Collecting duct, Intercalated type A
+CD-ICB - Collecting duct, Intercalated type B
+MC - Mesenchymal-derived (Mesangial,Fibroblasts, etc)
+Proliferating
+
 ---
 
 ## Quick Start
