@@ -45,7 +45,7 @@ CT - Connecting tubule,
 CD-PC - Collecting duct-Principal Cell,
 CD-ICA - Collecting duct-Intercalated type A,
 CD-ICB - Collecting duct-Intercalated type B,
-MC - Mesenchymal-derived (Mesangial,Fibroblasts, etc),
+MC - Mesenchymal-derived (Mesangial, Fibroblasts, etc),
 Proliferating
 
 ---
