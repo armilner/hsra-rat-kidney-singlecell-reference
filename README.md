@@ -120,14 +120,6 @@ hsra-rat-kidney-reference/
 
 ---
 
-## Data Availability
-
-Raw sequencing data are available via GEO:
-
-https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE289104
-
----
-
 ## Associated Publication
 
 https://doi.org/10.1152/ajprenal.00258.2024
