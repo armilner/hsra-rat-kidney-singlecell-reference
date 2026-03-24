@@ -1,3 +1,5 @@
+![Header Image](./images_large_ajprenal.00258.2024_f004.jpeg)
+
 # Rat Kidney snRNA-seq Reference
 
 > A reusable reference for annotating rat kidney single-cell and single-nucleus RNA-seq datasets.
