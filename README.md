@@ -6,7 +6,7 @@
 
 This repository provides a reusable single-nucleus RNA-seq reference of the 4-week rat kidney from the HSRA rat model which was derived from the NIH Heterogeneous Stock (HS).
 
-The resource is designed to support cell type annotation of rat kidney single-cell and single-nucleus datasets using SingleR (Bioconductor) and Seurat label transfer. It includes annotated reference objects, marker gene tables, and example workflows.
+The resource is designed to support cell type annotation of rat kidney single-cell and single-nucleus datasets using SingleR (Bioconductor) and Seurat label transfer. It includes annotated reference objects and example workflows.
 
 ---
 
