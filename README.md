@@ -1,6 +1,6 @@
 # Rat Kidney snRNA-seq Reference
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19196716.svg)](https://doi.org/10.5281/zenodo.19196716)
-[![Paper](https://img.shields.io/badge/Paper-AJP%20Renal-blue)](https://doi.org/10.1152/ajprenal.00258.2024)![Header Image]
+[![Publication](https://img.shields.io/badge/Publication-AJP%20Renal%202024-blue)](https://doi.org/10.1152/ajprenal.00258.2024)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![R](https://img.shields.io/badge/Made%20with-R-blue)](https://www.r-project.org/)
 [![Seurat](https://img.shields.io/badge/Seurat-v5-blueviolet)](https://satijalab.org/seurat/)
