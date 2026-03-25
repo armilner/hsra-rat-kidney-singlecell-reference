@@ -4,7 +4,7 @@
 [![R](https://img.shields.io/badge/Made%20with-R-blue)](https://www.r-project.org/)
 [![Seurat](https://img.shields.io/badge/Seurat-v5-blueviolet)](https://satijalab.org/seurat/)
 [![SingleR](https://img.shields.io/badge/SingleR-supported-orange)](https://bioconductor.org/packages/SingleR/)
-![Header Image](./images_large_ajprenal.00258.2024_f004.jpeg)
+[![Paper](https://img.shields.io/badge/Paper-AJP%20Renal-blue)](https://doi.org/10.1152/ajprenal.00258.2024)![Header Image](./images_large_ajprenal.00258.2024_f004.jpeg)
 
 > A reusable reference for annotating rat kidney single-cell and single-nucleus RNA-seq datasets.
 
