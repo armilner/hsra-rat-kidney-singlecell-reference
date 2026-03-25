@@ -161,6 +161,6 @@ doi = {10.1152/ajprenal.00258.2024},
 
 ## Limitations
 
-This reference is derived from 4-week rat kidney tissue in the HSRA model and littermate controls. While it captures major kidney cell types, users should consider differences related to developmental stage, disease context, and species when applying this reference.
+This reference is derived from 4-week rat kidney tissue in the HSRA rat model. While it captures major kidney cell types, users should consider differences related to developmental stage, disease context, and species when applying this reference.
 
 
