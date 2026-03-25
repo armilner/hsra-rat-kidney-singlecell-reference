@@ -1,5 +1,5 @@
 # Rat Kidney snRNA-seq Reference
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19196716.svg)](https://doi.org/10.5281/zenodo.19196716)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19196715.svg)](https://doi.org/10.5281/zenodo.19196715)
 [![Publication](https://img.shields.io/badge/Publication-AJP%20Renal%202025-blue)](https://doi.org/10.1152/ajprenal.00258.2024)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![R](https://img.shields.io/badge/Made%20with-R-blue)](https://www.r-project.org/)
@@ -12,7 +12,7 @@
 
 This repository provides a reusable single-nucleus RNA-seq reference of the 4-week rat kidney from the HSRA rat model which was derived from the NIH Heterogeneous Stock (HS).
 
-The resource is designed to support cell type annotation of rat kidney single-cell and single-nucleus datasets using SingleR (Bioconductor) or Seurat label transfer. It includes annotated reference objects and example workflows.
+The resource is designed to support cell type annotation of rat kidney single-cell and single-nucleus datasets using SingleR (Bioconductor), Seurat label transfer, or Azimuth (local reference mapping). It includes annotated reference objects and example workflows.
 
 ---
 
@@ -20,7 +20,7 @@ The resource is designed to support cell type annotation of rat kidney single-ce
 
 Single-cell and single-nucleus RNA-seq studies of the kidney require reliable reference datasets for accurate cell type annotation. While several resources exist for human and mouse, fewer are available for rat.
 
-This dataset provides a curated reference of the juvenile rat kidney with annotated cell types and supporting marker genes. It is intended for use in annotation, cross-dataset comparison, and validation of kidney cell type markers. Currently it is compatibile with SingleR or Seurat label transfer. Although generated from 4-week tissue, this reference may be applicable to both juvenile and adult rat kidney datasets.
+This dataset provides a curated reference of the juvenile rat kidney with annotated cell types and supporting marker genes. It is intended for use in annotation, cross-dataset comparison, and validation of kidney cell type markers. Currently it is compatibile with SingleR, Seurat label transfer, or Azimuth. Although generated from 4-week tissue, this reference may be applicable to both juvenile and adult rat kidney datasets.
 
 ---
 
@@ -28,11 +28,13 @@ This dataset provides a curated reference of the juvenile rat kidney with annota
 
 Reference objects needed for annotation are available on Zenodo:
 
-https://doi.org/10.5281/zenodo.19196716
+https://doi.org/10.5281/zenodo.19196715
 
 Files:
 - hsra_kidney_reference_dietseurat.rds
 - hsra_kidney_reference_sce_aggr.rds
+- azimuth_referenceidx.annoy
+- azimuth_referenceref.Rds
 
 ---
 
@@ -108,13 +110,33 @@ predictions <- TransferData(
 query_obj <- AddMetaData(query_obj, metadata = predictions)
 ```
 
+Or
+
+### Azimuth (local mapping)
+
+```r
+library(Seurat)
+library(Azimuth)
+
+#Download reference from Zenodo (idx.annoy and ref.Rds)
+
+# query_obj <- readRDS("your_query_seurat.rds")
+
+mapped <- RunAzimuth(
+  query = query_obj,
+  reference = "path/to/azimuth_reference_files"
+)
+
+head(mapped$predicted.celltype)
+```
+
 ---
 
 ## Methods Summary
 
 Single-nucleus RNA-seq data were processed using Seurat. Cells were filtered using standard quality control metrics, normalized, and clustered. Cell type annotations were assigned based on differential gene expression and established kidney marker genes.
 
-Reference objects were generated for use with SingleR and Seurat label transfer workflows. This reference was validated across independent rat kidney datasets using both SingleR annotation and Seurat label transfer approaches.
+Reference objects were generated for use with SingleR, Seurat label transfer workflows, and Azimuth local mapping. This reference was validated across independent rat kidney datasets.
 
 ---
 
