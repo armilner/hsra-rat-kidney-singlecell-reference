@@ -146,7 +146,8 @@ Reference objects were generated for use with SingleR, Seurat label transfer wor
 hsra-rat-kidney-reference/
 ├── scripts/
 │   ├── run_singler_example.R
-│   └── run_seurat_label_transfer.R
+│   ├── run_seurat_label_transfer.R
+│   └── run_azimuth_example.R
 └── README.md
 ```
 
