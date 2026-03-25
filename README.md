@@ -12,7 +12,7 @@
 
 This repository provides a reusable single-nucleus RNA-seq reference of the 4-week rat kidney from the HSRA rat model which was derived from the NIH Heterogeneous Stock (HS).
 
-The resource is designed to support cell type annotation of rat kidney single-cell and single-nucleus datasets using SingleR (Bioconductor) and Seurat label transfer. It includes annotated reference objects and example workflows.
+The resource is designed to support cell type annotation of rat kidney single-cell and single-nucleus datasets using SingleR (Bioconductor) or Seurat label transfer. It includes annotated reference objects and example workflows.
 
 ---
 
@@ -20,7 +20,7 @@ The resource is designed to support cell type annotation of rat kidney single-ce
 
 Single-cell and single-nucleus RNA-seq studies of the kidney require reliable reference datasets for accurate cell type annotation. While several resources exist for human and mouse, fewer are available for rat.
 
-This dataset provides a curated reference of the juvenile rat kidney with annotated cell types and supporting marker genes. It is intended for use in annotation, cross-dataset comparison, and validation of kidney cell type markers. Although generated from 4-week tissue, this reference may be applicable to both juvenile and adult rat kidney datasets.
+This dataset provides a curated reference of the juvenile rat kidney with annotated cell types and supporting marker genes. It is intended for use in annotation, cross-dataset comparison, and validation of kidney cell type markers. Currently it is compatibile with SingleR or Seurat label transfer. Although generated from 4-week tissue, this reference may be applicable to both juvenile and adult rat kidney datasets.
 
 ---
 
@@ -80,6 +80,8 @@ pred <- SingleR(
 
 table(pred$labels)
 ```
+
+## Or
 
 ### Seurat label transfer
 
