@@ -81,7 +81,7 @@ pred <- SingleR(
 table(pred$labels)
 ```
 
-## Or
+Or
 
 ### Seurat label transfer
 
