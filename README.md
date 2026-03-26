@@ -1,4 +1,4 @@
-# Rat Kidney snRNA-seq Reference
+# Rat Kidney snRNA-seq Reference built from HSRA Rat
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19196715.svg)](https://doi.org/10.5281/zenodo.19196715)
 [![Publication](https://img.shields.io/badge/Publication-AJP%20Renal%202025-blue)](https://doi.org/10.1152/ajprenal.00258.2024)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
