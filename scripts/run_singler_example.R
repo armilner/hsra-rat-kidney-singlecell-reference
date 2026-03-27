@@ -47,11 +47,25 @@ if (query_is_sce) {
   
   DefaultAssay(query_obj) <- "RNA"
   
-  # Join layers for Seurat v5 objects if needed.
+  # Join layers for Seurat v5 objects if needed
   query_obj <- JoinLayers(query_obj, assay = "RNA")
+  
+  # Ensure normalized RNA data layer exists
+  rna_data <- tryCatch(
+    LayerData(query_obj, assay = "RNA", layer = "data"),
+    error = function(e) NULL
+  )
+  
+  if (is.null(rna_data) || length(rna_data) == 0 || ncol(rna_data) == 0) {
+    query_obj <- NormalizeData(query_obj, assay = "RNA", verbose = FALSE)
+  }
   
   query_counts <- LayerData(query_obj, assay = "RNA", layer = "counts")
   query_logcounts <- LayerData(query_obj, assay = "RNA", layer = "data")
+  
+  if (!all(dim(query_counts) == dim(query_logcounts))) {
+    stop("Counts and normalized data layers do not match.")
+  }
   
   query_sce <- SingleCellExperiment(
     assays = list(
