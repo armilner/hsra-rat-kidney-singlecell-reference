@@ -9,6 +9,7 @@
 ![Header Image](./images_large_ajprenal.00258.2024_f004.jpeg)
 
 > A reusable reference for annotating rat kidney single-cell and single-nucleus RNA-seq datasets.
+> Milner AR, Johnson AC, Attipoe EM, Wu W, Challagundla L, Garrett MR. Methylseq, single-nuclei RNAseq, and discovery proteomics identify pathways associated with nephron-deficit CKD in the HSRA rat model. Am J Physiol Renal Physiol. 2025 Apr 1;328(4):F470-F488. doi: 10.1152/ajprenal.00258.2024. Epub 2025 Feb 21. PMID: 39982494; PMCID: PMC12224070.
 
 This repository provides a reusable single-nucleus RNA-seq reference of the 4-week rat kidney from the HSRA rat model which was derived from the NIH Heterogeneous Stock (HS).
 
